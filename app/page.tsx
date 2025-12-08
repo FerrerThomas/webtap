@@ -3,6 +3,7 @@ import { ArrowRight, Github, Linkedin, Mail, MessageCircle, Instagram } from "lu
 
 import { Button } from "@/components/ui/button"
 import { ProjectCard } from "@/components/project-card"
+import { projects } from "@/lib/projects"
 import { Timeline } from "@/components/timeline"
 import { ContactForm } from "@/components/contact-form"
 import { CreativeHero } from "@/components/creative-hero"
@@ -197,78 +198,28 @@ export default function Portfolio() {
           <SectionHeading title="Nuestros Proyectos" subtitle="Algunos trabajos recientes" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-            <ProjectCard
-              title="Barber Web"
-              description="Web para gestionar turnos de una barberia/peluqueria"
-              tags={["Next.js", "TypeScript", "MongoDB"]}
-              image="/Barberia.png?height=400&width=600"
-              demoUrl="https://turnos-barberia-neon.vercel.app/"
-              repoUrl="https://github.com/FerrerThomas/turnosBarberia"
-            />
-            <ProjectCard
-              title="Portfolio"
-              description="Web que estas viendo actualmente, diseñada para mostrar trabajos y conexion con api de mails"
-              tags={["Next.js", "Node.js", "Tailwind CSS", "TypeScript"]}
-              image="/Porfolio.png?height=400&width=600"
-              demoUrl="https://portfolio-ft-tomas.vercel.app/"
-              repoUrl="https://github.com/FerrerThomas/portfolio"
-            />
-            <ProjectCard
-              title="Ferreteria LandingPage"
-              description="Web para mostrar info sobre una ferreteria con posibles productos a consultar, contacto y comentarios de clientes"
-              tags={["React", "Valoraciones", "Whatsapp API", "Productos"]}
-              image="/Ferreteria.png?height=400&width=600"
-              demoUrl="https://ferreteria-landing.vercel.app/"
-              repoUrl="https://github.com/FerrerThomas/FerrereteriaLanding"
-            />
-            <ProjectCard
-              title="ERP para tiendas y negocios"
-              description="Web para gestionar productos, categorias, clientes, proveedores y ventas de mini tiendas o mercados"
-              tags={["Next.js", "Node.js", "MongoDB"]}
-              image="/erp-dashboard.png?height=400&width=600"
-              demoUrl="https://erp-dashboard-ft.vercel.app/"
-              repoUrl="https://github.com/FerrerThomas/ERP-Dashboard"
-            />
-            <ProjectCard
-              title="Sillones Vexo Desing "
-              description="Web para mostrar los trabajos de una empresa de sillones"
-              tags={["React", "Whatsapp API", "Categorias", "Talles"]}
-              image="/Sillones.png?height=400&width=600"
-              demoUrl="https://landing-sillones.vercel.app/"
-              repoUrl="https://github.com/Vexo-group/LandingSillones"
-            />
-            <ProjectCard
-              title="The Basement Shop"
-              description="Web para facilitar la consultar de stock de una tienda de ropa"
-              tags={["React", "Whatsapp API", "Categorias", "Talles"]}
-              image="/TheBasement.png?height=400&width=600"
-              demoUrl="https://the-basement-shop.vercel.app/"
-              repoUrl="https://github.com/FerrerThomas/TheBasement"
-            />
-            <ProjectCard
-              title="Lista Productos - Generar Pedido"
-              description="Web de un dietetica para generar un pedido por whatsapp, agregando al carrito por cantidad"
-              tags={["Pedidos", "Carrito de Compras", "Productos", "TypeScript"]}
-              image="/Agranel.png?height=400&width=600"
-              demoUrl="https://agranel-alimentos.vercel.app"
-              repoUrl="https://github.com/FerrerThomas/agranelAlimentos"
-            />
-            <ProjectCard
-              title="Gestion Deposito"
-              description="Web con un plano iterativo, notificaciones para tareas y mas..."
-              tags={["TypeScript", "Next.js", "MongoDB"]}
-              image="/gestionDepo.png?height=400&width=600"
-              demoUrl="https://gestion-deposito.vercel.app/"
-              repoUrl="https://github.com/FerrerThomas/gestionDeposito"
-            />
-            <ProjectCard
-              title="Tea Coleccion - Emprendimientos de Te"
-              description="Web para mostrar la historia del emprendimiento, contacto, direccion y sus productos para consultar en whatsapp"
-              tags={["React", "Whatsapp API", "Productos"]}
-              image="/TiendaTea.png?height=400&width=600"
-              demoUrl="https://tea-collection-la-plata.vercel.app/"
-              repoUrl="https://github.com/FerrerThomas/teaCollection"
-            />
+            {projects.slice(0, 3).map((project, index) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                tags={project.tags}
+                image={project.image}
+                demoUrl={project.demoUrl}
+                repoUrl={project.repoUrl}
+              />
+            ))}
+          </div>
+
+          <div className="flex justify-center mt-12">
+            <Link href="/proyectos">
+              <Button size="lg" className="relative overflow-hidden group bg-gradient-to-r from-yellow-500 to-red-500 border-0">
+                <span className="relative z-10 flex items-center">
+                  Ver Todos los Proyectos <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
+                <span className="absolute inset-0 bg-gradient-to-r from-red-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -408,6 +359,6 @@ export default function Portfolio() {
           </div>
         </div>
       </footer>
-    </div>
+    </div >
   )
 }
