@@ -78,16 +78,6 @@ export default function Portfolio() {
                   <span className="sr-only">GitHub</span>
                 </Button>
               </Link>
-              <Link href="https://www.linkedin.com/in/tomas-ferrer-910133353/" target="_blank" rel="noopener noreferrer">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-                >
-                  <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
-                </Button>
-              </Link>
               <Link href="mailto:tomasferrer_web@hotmail.com">
                 <Button
                   variant="ghost"
@@ -146,7 +136,7 @@ export default function Portfolio() {
             <div className="relative hidden md:block">
               {/*<div className="relative max-w-md mx-auto">*/}
               <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-yellow-500/20 to-red-500/20 blur-xl opacity-70"></div>
-              <div className="relative h-[600px] w-full rounded-xl overflow-hidden border border-zinc-800">
+              <div className="relative h-[500px] w-full rounded-xl overflow-hidden border border-zinc-800">
                 <img
                   src="/webtapLogo2.png?height=600&width=600"
                   alt="Webtap Logo"
@@ -179,14 +169,7 @@ export default function Portfolio() {
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 mt-8">
-                  <div className="space-y-1">
-                    <div className="text-sm text-zinc-500">Agencia</div>
-                    <div className="font-medium">Webtap</div>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="text-sm text-zinc-500">Email</div>
-                    <div className="font-medium">tomasferrer_web@hotmail.com</div>
-                  </div>
+
                   <div className="space-y-1">
                     <div className="text-sm text-zinc-500">Ubicacion</div>
                     <div className="font-medium">La Plata, Argentina</div>
@@ -320,7 +303,7 @@ export default function Portfolio() {
             <GlassmorphicCard>
               <h3 className="text-2xl font-bold mb-6">Informacion de Contacto</h3>
               <div className="space-y-6">
-                <div className="flex items-center gap-4">
+                {/*<div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center">
                     <Mail className="h-5 w-5 text-orange-400" />
                   </div>
@@ -328,8 +311,8 @@ export default function Portfolio() {
                     <div className="text-sm text-zinc-500">Email</div>
                     <div className="font-medium">tomasferrer_web@hotmail.com</div>
                   </div>
-                </div>
-                <div className="flex items-center gap-4">
+                </div>*/}
+                {/*<div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center">
                     <Linkedin className="h-5 w-5 text-orange-400" />
                   </div>
@@ -337,8 +320,8 @@ export default function Portfolio() {
                     <div className="text-sm text-zinc-500">LinkedIn</div>
                     <div className="font-medium">linkedin.com/in/tomasferrer</div>
                   </div>
-                </div>
-                <div className="flex items-center gap-4">
+                </div>*/}
+                {/*<div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center">
                     <Github className="h-5 w-5 text-orange-400" />
                   </div>
@@ -346,7 +329,7 @@ export default function Portfolio() {
                     <div className="text-sm text-zinc-500">GitHub</div>
                     <div className="font-medium">github.com/ferrerthomas</div>
                   </div>
-                </div>
+                </div>*/}
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center">
                     <MessageCircle className="h-5 w-5 text-orange-400" />
@@ -392,7 +375,7 @@ export default function Portfolio() {
             </p>
           </div>
           <div className="flex gap-4">
-            <Link href="https://github.com/tomasferrer" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/ferrerthomas" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="ghost"
                 size="icon"
@@ -400,26 +383,6 @@ export default function Portfolio() {
               >
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
-              </Button>
-            </Link>
-            <Link href="https://www.linkedin.com/in/tomasferrer/" target="_blank" rel="noopener noreferrer">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-              >
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Button>
-            </Link>
-            <Link href="mailto:tomasferrer_web@hotmail.com">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-              >
-                <Mail className="h-5 w-5" />
-                <span className="sr-only">Email</span>
               </Button>
             </Link>
             <Link href="https://wa.me/2355506234" target="_blank" rel="noopener noreferrer">
